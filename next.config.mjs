@@ -32,7 +32,7 @@ const nextConfig = {
 
   // Environment variables (set API URLs or any other variables you need)
   env: {
-    API_URL: isProd ? 'https://app.myb4y.com/api' : 'http://localhost:3000/api', // Adjust based on your needs
+    API_URL: isProd ? 'https://app.myb4y.com/api' : 'https://app.myb4y.com/api', // Adjust based on your needs
   },
 
   // ...other config
