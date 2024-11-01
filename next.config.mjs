@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
@@ -26,6 +28,11 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i;
 
     return config;
+  },
+
+  // Environment variables (set API URLs or any other variables you need)
+  env: {
+    API_URL: isProd ? 'https://api.yourdomain.com' : 'http://localhost:3000/api', // Adjust based on your needs
   },
 
   // ...other config
